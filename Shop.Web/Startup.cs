@@ -14,8 +14,9 @@ namespace Shop.Web
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
-    using Shop.Web.Data;
-    using Shop.Web.Data.Entities;
+    using Data;
+    using Data.Entities;
+    using Helpers;
 
     public class Startup
     {
@@ -53,7 +54,11 @@ namespace Shop.Web
 
             services.AddTransient<SeedDb>();
 
-            services.AddScoped<IRepository,Repository>();
+            services.AddScoped<IProductRepository,ProductRepository>();
+
+            services.AddScoped<ICountryRepository, CountryRepository>();
+
+            services.AddScoped<IUserHelper, UserHelper>();
 
 
             services.Configure<CookiePolicyOptions>(options =>
