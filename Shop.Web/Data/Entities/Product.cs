@@ -14,28 +14,27 @@ namespace Shop.Web.Data.Entities
     {
 		public int Id { get; set; }
 
-		[MaxLength(50,ErrorMessage = "El campo {0} solo puede contener 50 caracteres de longitud.")]
+		[Display(Name = "Productos y Servicios")]
+		[MaxLength(100,ErrorMessage = "El campo {0} solo puede contener 50 caracteres de longitud.")]
 		[Required]
-		public string Name { get; set; }
+		public string ProSer { get; set; }
 
-		[DisplayFormat(DataFormatString = "{0:C2}", ApplyFormatInEditMode = false)]
-		public decimal Price { get; set; }
+		[Display(Name = "Descripcion")]
+		public string Descripcion { get; set; }
 
-		[Display(Name = "Image")]
+		[Display(Name = "Imagen")]
 		public string ImageUrl { get; set; }
 
-		[Display(Name = "Last Purchase")]
-		public DateTime? LastPurchase { get; set; }
+		[Display(Name = "Direccion")]
+		public string Direccion { get; set; }
 
-		[Display(Name = "Last Sale")]
-		public DateTime? LastSale { get; set; }
+		[Display(Name = "Contacto")]
+		public string Contacto { get; set; }
 
-		[Display(Name = "Is Availabe?")]
-		public bool IsAvailabe { get; set; }
+		[Display(Name = "Presentacion")]
+		public bool Presentacion { get; set; }
 
-		[DisplayFormat(DataFormatString = "{0:N2}", ApplyFormatInEditMode = false)]
-		public double Stock { get; set; }
-
+		
 		public User User { get; set; }
 
 

@@ -15,14 +15,14 @@
             <input type="hidden" asp-for="Id" />
             <input type="hidden" asp-for="ImageUrl" />
             <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
+                <label asp-for="ProSer" class="control-label"></label>
+                <input asp-for="ProSer" class="form-control" />
+                <span asp-validation-for="ProSer" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Price" class="control-label"></label>
-                <input asp-for="Price" class="form-control" />
-                <span asp-validation-for="Price" class="text-danger"></span>
+                <label asp-for="Descripcion" class="control-label"></label>
+                <input asp-for="Descripcion" class="form-control" />
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="ImageFile" class="control-label"></label>
@@ -30,26 +30,20 @@
                 <span asp-validation-for="ImageFile" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="LastPurchase" class="control-label"></label>
-                <input asp-for="LastPurchase" class="form-control" />
-                <span asp-validation-for="LastPurchase" class="text-danger"></span>
+                <label asp-for="Direccion" class="control-label"></label>
+                <input asp-for="Direccion" class="form-control" />
+                <span asp-validation-for="Direccion" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="LastSale" class="control-label"></label>
-                <input asp-for="LastSale" class="form-control" />
-                <span asp-validation-for="LastSale" class="text-danger"></span>
+                <label asp-for="Contacto" class="control-label"></label>
+                <input asp-for="Contacto" class="form-control" />
+                <span asp-validation-for="Contacto" class="text-danger"></span>
             </div>
+            
             <div class="form-group">
-                <div class="checkbox">
-                    <label>
-                        <input asp-for="IsAvailabe" /> @Html.DisplayNameFor(model => model.IsAvailabe)
-                    </label>
-                </div>
-            </div>
-            <div class="form-group">
-                <label asp-for="Stock" class="control-label"></label>
-                <input asp-for="Stock" class="form-control" />
-                <span asp-validation-for="Stock" class="text-danger"></span>
+                <label asp-for="Presentacion" class="control-label"></label>
+                <input asp-for="Presentacion" class="form-control" />
+                <span asp-validation-for="Presentacion" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

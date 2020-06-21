@@ -8,10 +8,12 @@ namespace Shop.Web.Controllers
     using Data;
     using Data.Entities;
     using Helpers;
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.EntityFrameworkCore;
     using Shop.Web.Models;
 
+    [Authorize]
     public class ProductsController : Controller
     {
         private readonly IProductRepository productRepository;
@@ -27,7 +29,7 @@ namespace Shop.Web.Controllers
         // GET: Products
         public IActionResult Index()
         {
-            return View(this.productRepository.GetAll().OrderBy(p=>p.Name));
+            return View(this.productRepository.GetAll().OrderBy(p=>p.ProSer));
         }
 
         // GET: Products/Details/5
@@ -96,12 +98,11 @@ namespace Shop.Web.Controllers
             {
                 Id = view.Id,
                 ImageUrl = path,
-                IsAvailabe = view.IsAvailabe,
-                LastPurchase = view.LastPurchase,
-                LastSale = view.LastSale,
-                Name = view.Name,
-                Price = view.Price,
-                Stock = view.Stock,
+                ProSer = view.ProSer,
+                Direccion = view.Direccion,
+                Contacto = view.Contacto,
+                Descripcion = view.Descripcion,
+                Presentacion = view.Presentacion,
                 User = view.User
 
             };
@@ -134,15 +135,16 @@ namespace Shop.Web.Controllers
             return new ProductViewModel
             {
                 Id = product.Id,
-                IsAvailabe = product.IsAvailabe,
-                LastPurchase = product.LastPurchase,
-                LastSale = product.LastSale,
                 ImageUrl = product.ImageUrl,
-                Name = product.Name,
-                Price = product.Price,
-                Stock = product.Stock,
+                ProSer = product.ProSer,
+                Direccion = product.Direccion,
+                Contacto = product.Contacto,
+                Descripcion = product.Descripcion,
+                Presentacion = product.Presentacion,
                 User = product.User
 
+
+                
             };
 
 

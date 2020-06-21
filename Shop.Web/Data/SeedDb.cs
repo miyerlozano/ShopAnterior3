@@ -26,15 +26,15 @@ namespace Shop.Web.Data
             await this.context.Database.EnsureCreatedAsync();
 
 
-            var user = await this.userHelper.GetUserByEmailAsync("jzuluaga55@gmail.com");
+            var user = await this.userHelper.GetUserByEmailAsync("mlozanos@gmail.com");
             if (user == null)
             {
                 user = new User
                 {
-                    FirstName = "Juan",
-                    LastName = "Zuluaga",
-                    Email = "jzuluaga55@gmail.com",
-                    UserName = "jzuluaga55@gmail.com",
+                    FirstName = "Miyer",
+                    LastName = "Lozano",
+                    Email = "mlozanos@gmail.com",
+                    UserName = "mlozanos@gmail.com",
                     PhoneNumber = "3503256789"
                 };
 
@@ -59,11 +59,11 @@ namespace Shop.Web.Data
         {
             this.context.Products.Add(new Product
             {
-                Name = name,
-                Price = this.random.Next(100),
-                IsAvailabe = true,
-                Stock = this.random.Next(100),
+                ProSer = name,
+                               
                 User=user
+
+
             });
         }
     }
